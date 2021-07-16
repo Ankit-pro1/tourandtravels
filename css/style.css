@@ -1,0 +1,796 @@
+/************  Color Variables ***********/
+:root{
+    --primary: #F15A2B;
+    --secondary: #354C93;
+    --black: #000000;
+    --white: #ffffff;
+}
+
+/************  Utility Classes  ************/
+body{
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+.lfpadding{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.tbpadding{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.heading{
+    text-align: center;
+    font-weight: 800;
+    margin: 10px 0;
+}
+ul{
+    list-style: none;
+    padding: 0%;
+}
+.custom-btn{
+    padding: 10px 18px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    border: 2px solid var(--primary);
+    transition: all 0.3s ease-in;
+    background-color: var(--white);
+}
+button,
+button:active,
+button:focus{
+    outline: none;
+}
+input,
+input:hover,
+input:focus{
+    outline: none;
+}
+a:hover,
+a:active,
+a:focus,
+a{
+    text-decoration: none;
+    color: var(--black);
+}
+/************** Navigation Bar *************/
+#custom-navbar .navbar{
+    background-color: var(--white);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+#custom-navbar .navbar-brand p{
+    font-size: 26px;
+    font-weight: 600;
+    color: #F15A2B;
+}
+#custom-navbar .nav-link{
+    color: var(--black);
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease-in;
+}
+
+#custom-navbar .nav-link:hover{
+    color: var(--primary);
+}
+
+#custom-navbar .imp-link{
+    border: 2px solid var(--primary);
+    border-radius: 20px;
+    font-weight: 500;
+    margin: 0 4px;
+    transition: all 0.3s ease-in;
+}
+#custom-navbar .imp-link:hover{
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+
+#custom-navbar .dropdown:hover .dropdown-menu{
+    display: block;
+}
+#custom-navbar .dropdown:hover .dropdown-menu .dropdown-item{
+    transition: all 0.3s ease-in;
+}
+#custom-navbar .dropdown .dropdown-menu .dropdown-item:hover,
+#custom-navbar .dropdown .dropdown-menu .dropdown-item:focus,
+#custom-navbar .dropdown .dropdown-menu .dropdown-item:active{
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+#custom-navbar .nav-link i{
+    color: var(--white);
+    font-size: 20px;
+    background-color: var(--primary);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active{
+    outline: none;
+}
+.toggler-btn{
+    font-size: 26px;
+    color: var(--primary);
+    cursor: pointer;
+}
+#search-btn:hover #search-input{
+    display: block;
+}
+#search-input{
+    z-index: 9999;
+    position: fixed;
+    top: 90px;
+    right: 138px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+#search-input input{
+    margin: -6px;
+    outline: none;
+    border-radius: 10px 0 0 10px;
+    padding: 8px 10px;
+    font-size: 16px;
+    width: 360px;
+    border: none;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+}
+#search-input button{
+    outline: none;
+    border: none;
+    background-color: var(--primary);
+    font-size: 20px;
+    border-radius: 0 10px 10px 0;
+    padding: 7px 14px;
+    cursor: pointer;
+    color: var(--white);
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+}
+/************** Navigation Bar End *************/
+
+/************** Hero Section(Slider) *************/
+#hero-section{
+    position: relative;
+}
+#hero-section .slideshow-container{
+    margin-top: 70px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#hero-section .myslide{
+    position: relative;
+    display: none;
+    text-transform: uppercase;
+}
+#hero-section .myslide::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(53, 76, 147, 0.2);
+}
+#hero-section .myslide .text{
+    position: absolute;
+    z-index: 999;
+    color: var(--white);
+    left: 20%;
+    top: 30%;
+    font-size: 3rem;
+    font-weight: 600;
+}
+#hero-section .myslide .text span{
+    color: var(--primary);
+}
+#hero-section .slideshow-container .myslide img{
+    width: 100%;
+    height: 500px;
+    object-fit:cover;
+}
+
+#hero-section #indicators{
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#hero-section #indicators .indicator{
+    cursor: pointer;
+    display: inline-block;
+    width: 50px;
+    height: 4px;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 2px;
+    transition: all 0.3s ease-in;
+}
+.active{
+    background-color: var(--primary);
+}
+
+/* .fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade{
+    0%{
+        opacity: 0.8;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes fade{
+    0%{
+        opacity: 0.8;
+    }
+    100%{
+        opacity: 1;
+    }
+} */
+
+/*******XX******* Hero Section(Slider) End ******XX*******/
+#signin-register-model{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+    display: none;
+}
+#signin-register-model .modal-dialogue #user-model-hide-btn{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    top: -5%;
+    right: -5%;
+    font-size: 50px;
+    background-color: rgb(255, 0, 0);
+    border: none;
+    color: var(--white);
+    border-radius: 50%;
+    transition: all 0.3s ease-in;
+}
+#signin-register-model .modal-dialogue #user-model-hide-btn:hover{
+    background-color: rgba(255, 0, 0);
+}
+#signin-register-model .modal-dialogue{
+    position: relative;
+    width: 380px;
+    margin: 6% auto;
+    background-color: var(--white);
+    border-radius: 12px;    
+    padding: 20px 30px;
+}
+#signin-register-model .modal-dialogue .button-box{
+    height:36px;
+    border-radius: 30px;text-align: center;
+    display: flex;
+}
+#signin-register-model .button-box button{
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid var(--primary);
+    background-color: transparent;
+    color: var(--black);
+    width: 50%;
+    font-size: 20px;
+    cursor: pointer;
+}
+#signin-register-model .button-box .login.active{
+    background-color: var(--primary);
+    color: var(--white);
+}
+#signin-register-model .login-form{
+    margin-top: 30px;
+    display: block;
+}
+#signin-register-model .login-form .input-control{
+    width: 100%;
+    padding: 4px 10px;
+    font-size: 18px;
+    margin: 6px 0;
+    border: 2px solid var(--primary);
+    border-radius: 10px;
+}
+#signin-register-model .login-form .input-check{
+   width: 20px;
+   height: 20px;
+   border-radius: 10px;
+   border: 2px solid var(--secondary);
+
+}
+#signin-register-model .login-form .submit-btn{
+    text-align: center;
+    margin-top: 26px;
+}
+#signin-register-model .login-form .submit-btn button{
+    outline: none;
+    border: 2px solid var(--secondary);
+    padding: 4px 16px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: var(--white);
+    color: var(--secondary);
+    transition: all 0.3s ease-in;
+}
+#signin-register-model .login-form .submit-btn button:hover{
+    background-color: var(--secondary);
+    color: var(--white);
+}
+/****************** Bus Ticket ******************/
+#bus-ticket{
+    background-color: var(--secondary);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+}
+#bus-ticket .bus-ticket-heading{
+    font-size: 34px;
+    font-weight: 500;
+}
+#bus-ticket input{
+    outline: none;
+    font-size: 20px;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-weight: 400;
+    border: none;
+}
+#bus-ticket input.route-input{
+    width: 130px;
+}
+#bus-ticket input.destination-input{
+    width: 580px;
+}
+#bus-ticket .custom-btn:hover{
+    background-color: var(--primary);
+    color: var(--white);
+}
+/**********XX******** Bus Ticket End *********XX*********/
+
+/****************** Portfolio Images Filter ******************/
+#portfolio-image-filter ul{
+    list-style: none;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+#portfolio-image-filter ul> li{
+    border: 2px solid var(--primary);
+    margin: 4px;
+    padding: 6px 22px;
+    border-radius: 200px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+}
+#portfolio-image-filter ul> li.active{
+    background-color: var(--primary);
+    color: var(--white);
+}
+#portfolio-image-filter .our-carousels .owl-item{
+    background-color: var(--white);
+}
+#portfolio-image-filter .our-carousels .owl-nav{
+    display: block;
+    transition: all 0.2s ease-in;
+}
+#portfolio-image-filter  .owl-prev,#portfolio-image-filter  .owl-next{
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--black);
+}
+#portfolio-image-filter .our-carousels .owl-nav .owl-prev:hover,#portfolio-image-filter .our-carousels .owl-nav .owl-next:hover{
+    background-color: var(--white);
+    color: var(--primary);
+}
+#portfolio-image-filter .our-carousels .owl-nav span{
+    font-size: 50px;
+    font-weight: 600;
+}
+#portfolio-image-filter .our-carousels .choose-box{
+   background-color: var(--white);
+   padding-bottom: 0;
+   margin-top: 10px;
+}
+#portfolio-image-filter .our-carousels .carousel.hide{
+    display: none;
+}
+#portfolio-image-filter .our-carousels .choose-box:hover{
+    box-shadow: 2px 2px 10px  rgba(0, 0, 0, 0.2);
+}
+#portfolio-image-filter .card-title{
+    margin-top: 10px;
+    font-size: 20px;
+}
+#portfolio-image-filter .custom-btn{
+  display: block;
+  width: 50%;
+  margin: auto;
+  padding: 4px 12px;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  outline: none;
+  border-radius: 25px;
+  transition: all 0.3s ease-in;
+}
+#portfolio-image-filter .custom-btn:hover{
+    background-color: var(--primary);
+    color: var(--white);
+}
+#portfolio-image-filter .item h3{
+    font-weight: 600;
+}
+#portfolio-image-filter .item .choose-box-footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#portfolio-image-filter .item h6{
+    color: var(--primary);
+}
+#portfolio-image-filter .item .choose-box-footer p{
+    font-size: 18px;
+    color: var(--primary);
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 0%;
+}
+#van-carousel img, #traveller-carousel img{
+    width: 291px;
+    height: 158px;
+    margin: auto;
+    display: inline-block;
+    object-fit: cover;
+}
+
+#portfolio-image-filter .item .choose-box-footer-btn{
+    outline: none;
+    background-color:var(--white);
+    font-size: 16px;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    padding: 4px 10px;
+    border-radius: 30px;
+    transition: all 0.3s ease-in;
+    font-weight: bold!important;
+}
+#portfolio-image-filter .item .choose-box-footer-btn:hover{
+    background-color: var(--primary);
+    color: var(--white);
+}
+/**********XX******** Portfolio Images Filter ********XX**********/
+
+/******************** Contact Us Section *************************/
+
+#contact-us .map{
+    position: relative;
+}
+#contact-us .address{
+    padding:20px;
+    background-color: #f8f8f8;
+}
+#contact-us .address h4{
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 36px;
+    font-size: 26px;
+}
+#contact-us .address .contacts  div i{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    list-style: 30px;
+    font-size: 24px;
+    margin-right: 12px;
+    color: var(--primary);
+}
+#contact-us .address .contacts > div{
+    margin: 1rem 0;
+}
+#contact-us .address .contacts > div a{
+    display: inline-block;
+    color: var(--black);
+}
+#contact-us .address .contacts .share-location{
+    font-size: 16px;
+    font-weight: 600;
+}
+#contact-us .address .contacts .share-location a{
+    color: var(--primary);
+}
+#contact-us .address .custom-btn{
+    border: 2px solid var(--primary);
+    border-radius: 30px;
+    padding:6px 12px;
+    margin-top: 30px;
+    margin-bottom: 12px;
+}
+#contact-us .address .custom-btn:hover{
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+
+/***********XX********* Contact Us Section **************XX***********/
+
+
+/******************** Footer Section *************************/
+#footer .lfpadding::before{
+    position: absolute;
+    content: '';
+    top: 0px;
+    left: 3%;
+    width: 94%;
+    height: 2px;
+    background-color: var(--primary);
+}
+#footer{
+    position: relative;
+    margin-top: 100px;
+    padding-top: 20px;
+}
+#footer h4{
+    color: var(--secondary);
+    font: 600;
+}
+#footer ul{
+    padding: 0%;
+}
+#footer .footer-logo li{
+    margin-top: 20px;
+    list-style: none;
+    display: inline-block;
+}
+
+#footer .footer-logo ul li a{
+    margin: 4px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    /* font-size: 1px; */
+    font-size: 18px;
+    text-align: center;
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+    transition: all 0.3s ease-in;
+}
+#footer .footer-list li{
+    margin: 12px 0;
+}
+#footer .footer-list h4{
+    font-weight: 600;
+}
+#footer .footer-list li a{
+    font-weight: 500;
+    transition: all 0.3S ease-in;
+}
+#footer .footer-list li a:hover{
+   color: var(--primary);
+}
+#footer-footer .right ul li a i{
+    font-size: 8px;
+}
+#footer .footer-logo ul li a:hover{
+    background-color: var(--secondary);
+    color: var(--white);
+}
+#footer #footer-latest-post img{
+    width: 275px;
+    height: 120px;
+    margin: 4px 0;
+    display: inline-block;
+    margin: 6px;
+}
+#footer #footer-latest-post ul li{
+    margin: 14px;
+}
+#footer #footer-latest-post a{
+    position: relative;
+    display: inline-block;
+}
+#footer #footer-latest-post .img-overlay{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(133,140,146,0.8);
+    /* background-color: rgba(255, 255, 255, 0.4); */
+    color: var(--white);
+}
+#footer #footer-latest-post h4{
+    font-weight: 700;
+}
+#footer #footer-latest-post .img-overlay h5{
+    font-weight: bold;
+}
+#footer #footer-latest-post .img-overlay p{
+    font-size: 14px;
+    padding: 0%;
+}
+#footer-footer{
+    background-color: var(--secondary);
+    padding: 6px 0;
+}
+#footer-footer .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white);
+    font-weight: 500;
+}
+#footer-footer .right ul li{
+    display: inline-block;
+    margin: 0 10px;
+}
+#footer-footer select{
+    background-color: var(--secondary);
+    border: none;
+    color: var(--white);
+    padding: 2px 4px;
+    border-bottom: 2px solid var(--white);
+    outline: none;
+    margin-right: 4px;
+}
+#footer-footer select option{
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 10px;
+}
+
+/********************** Footer Section ********************/
+
+/********************** Why Choose Us Section ********************/
+#why-choose-us{
+    margin: 40px 0;
+    margin-bottom: 80px;
+}
+#why-choose-us h3{
+    color: var(--secondary);
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 36px;
+}
+#why-choose-us img{
+    width: 100%;
+}
+/**************XX******** Why Choose Us Section **********XX**********/
+
+@media only screen and (max-width: 992px){
+   
+    .lfpadding{
+        padding: 10px 30px;
+    }
+}
+@media only screen and (max-width: 576px){
+    #contact-us .map{
+        height: 300px;
+    }
+}
+@media only screen and (max-width: 576px){
+    .heading{
+        font-size: 26px;
+        margin: 0%;
+    }
+    .tbpadding{
+        padding: 20px 0;
+    }
+    .lfpadding{
+        padding: 10px 10px;
+    }
+    #custom-navbar .navbar-brand img{
+        height: 55px;
+    }
+    #bus-ticket{
+        margin-bottom: 20px;
+    }
+    #bus-ticket input{
+        margin-bottom: 5px;
+    }
+    #hero-section .slideshow-container .myslide img{
+        height: 320px;
+    }
+    #hero-section .myslide .text{
+        font-size: 26px;
+        left: 8%;
+    }
+    #indicators .indicator{
+        width: 30px;
+        height: 3px;
+    }
+    #bus-ticket input.route-input {
+        width: 100px;
+    }
+    #bus-ticket input.destination-input{
+        width: 218px;
+    }
+    #bus-ticket .bus-ticket-heading{
+        font-size: 26px;
+    }
+    #bus-ticket input{
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+    #bus-ticket input.route-input{
+        width: 80px;
+    }
+    #portfolio-image-filter .list-options ul{
+        overflow-x: scroll;
+        white-space: nowrap;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+    #portfolio-image-filter ul> li{
+        border: 2px solid var(--primary);
+        margin: 2px;
+        padding: 6px 12px;
+        border-radius: 200px;
+        font-size: 16px;
+        font-weight: bold;
+        transition: all 0.3s ease-in;
+        cursor: pointer;
+    }
+    #portfolio-image-filter .list-options ul li{
+        display: inline-block;
+    }
+    #bus-ticket .custom-btn{
+        padding: 3px 12px;
+    }
+    #why-choose-us h3{
+        font-size: 20px;
+    }
+    #contact-us .row{
+        margin:0 10px;
+    }
+    #contact-us .address h4 {
+        margin: 15px 0;
+    }
+    #contact-us .address .contacts div{
+        margin: 8px 0;
+    }
+    #footer .footer-logo p{
+        height: 70px;
+        width: auto;
+    }
+    #footer-footer .right{
+        display: none;
+    }  
+}

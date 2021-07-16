@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tourists Transport Company All India</title>
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- Owl Carousel Theme CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" />
+
+  <!-- Boostrap Template 4.0.0-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- FontFamily- Monserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Fontawesome Icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+  <!-------------------- Navigation Bar --------------------->
+  <div id="custom-navbar">
+    <nav class="navbar navbar-expand-lg  lfpadding fixed-top">
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="#">
+        <p class="m-0">Company Logo</p>
+      </a>
+
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <i class="fas fa-bars toggler-btn"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <!-- Dropdown Destination -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+              Destinations
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Link 1</a>
+              <a class="dropdown-item" href="#">Link 2</a>
+              <a class="dropdown-item" href="#">Link 3</a>
+            </div>
+          </li>
+
+          <!-- Dropdown Vehicles -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+              Our Fleets
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Cars & Taxi</a>
+              <a class="dropdown-item" href="#">Tempo Travellers</a>
+              <a class="dropdown-item" href="#">Buses & Coaches</a>
+            </div>
+          </li>
+
+          <!-- Dropdown Vehicles -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+              Services
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Link 1</a>
+              <a class="dropdown-item" href="#">Link 2</a>
+              <a class="dropdown-item" href="#">Link 3</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Gallery</a>
+          </li>
+        </ul>
+        <!-- Right Side -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="" class="nav-link imp-link">Get a Quote</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link" style="font-weight: 500;">Manage Booking</a>
+          </li>
+          <li class="nav-item" id="search-btn" onclick="searchInputFunction()">
+            <button style="outline: none; background-color: transparent; border: none; cursor: pointer;" class="nav-link"><i class="fas fa-search"></i></button>
+          </li>
+          <li class="nav-item">
+            <button style="outline: none; background-color: transparent; border: none; cursor: pointer;" class="nav-link"><i class="fas fa-user" id="user-login"></i></button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div id="search-input">
+    <input type="text" name="" id="" placeholder="Enter order no. & search your vehicle">
+    <button type="submit"><i class="fas fa-search"></i></button>
+  </div>
+
+  <!-- Modal Box For Sign In and Sign Up user -->
+  <div class="signin-register-model" id="signin-register-model">
+    <div class="modal-dialogue">
+      <button id="user-model-hide-btn">&times;</button>
+      <div class="button-box">
+        <button class="login  active" id="login">Log In</button>
+        <button class="login" id="register">Register</button>
+      </div>
+      <div class="login-form">
+        <form action="" class="login">
+          <input type="text" name="" id="" class="input-control" placeholder="username">
+          <input type="password" name="" id="" class="input-control" placeholder="password">
+          <div class="submit-btn">
+            <button type="submit">Login</button>
+          </div>
+        </form>
+        <form action="" class="register">
+          <input type="text" name="" id="" class="input-control" placeholder="username">
+          <input type="tel" name="" id="" class="input-control" placeholder="phone number">
+          <div class="submit-btn">
+            <button type="submit">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Box For Sign In and Sign Up user End  -->
+
+  <!----------XX------------  Navigation Bar End ---------XX--------->
+
+
+  <!----------------------  Hero Section(Slider) ------------------>
+  <div id="hero-section">
+    <div class="slideshow-container">
+      <div class="myslide">
+        <img src="./assets/heroBanner/bn1.jpg" alt="">
+        <div class="text"><span>Apna Travels</span> <br>India's Best Tourism Agency</div>
+      </div>
+
+      <div class="myslide">
+        <img src="./assets/heroBanner/bn2.jpg" alt="">
+        <div class="text">We Make Travel <br> <span>Joyful</span></div>
+      </div>
+
+      <div class="myslide">
+        <img src="./assets/heroBanner/bn3.jpg" alt="">
+        <div class="text"><span>Explore</span> The World <br> With Us</div>
+      </div>
+
+      <div class="myslide">
+        <img src="./assets/heroBanner/bn4.jpg" alt="">
+        <div class="text">We Makes Every <br> Destination <span>Memorable</span></div>
+      </div>
+    </div>
+    <div id="indicators">
+      <span class="indicator" onclick="currentSlide(1)"></span>
+      <span class="indicator" onclick="currentSlide(2)"></span>
+      <span class="indicator" onclick="currentSlide(3)"></span>
+      <span class="indicator" onclick="currentSlide(4)"></span>
+    </div>
+  </div>
+  <!-----------XX-----------  Hero Section(Slider) End ---------XX--------->
+
+
+
+  <!----------------------  Bus Ticket  ------------------>
+  <div id="bus-ticket">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <p class="bus-ticket-heading">Search for Bus Ticket Online</p>
+          <form action="">
+            <input type="text" name="" id="routeno" placeholder="Route No." required class="route-input">
+            <input type="text" name="" id="destionation" placeholder="Destination" required class="destination-input">
+            <input type="date" name="" id="date" placeholder="Onward Date">
+            <button class="custom-btn">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-----------XX-----------  Bus Ticket End ---------XX--------->
+
+
+
+  <!----------------------  Portfolio Filter ------------------>
+  <div id="portfolio-image-filter" class="tbpadding">
+    <div>
+      <h1 class="heading text-center">Commercial & Passenger Vehicles On Rent</h1>
+      <div class="list-options">
+        <ul>
+          <li class="list active" data-filter="cars">Cars/SUV</li>
+          <li class="list" data-filter="vans">Mini Vans</li>
+          <li class="list" data-filter="travellers">Tavellers</li>
+          <li class="list" data-filter="buses">Buses/Luxury Buses</li>
+        </ul>
+      </div>
+      <div class="our-carousels">
+        <!-- Carousel For Car -->
+        <div class="carousel owl-carousel owl-theme" data-item="cars">
+          <div class="item">
+            <div class="choose-box">
+              <img src="./assets/CarImages/291-x-158-mahindra-alturasg4.webp" alt="" class="card-top-img">
+              <h3 class="card-title text-center">Mahindra Altrus</h3>
+              <h6 class="text-center text-dark">4 Passenger + 1 Driver</h6>
+              <hr>
+              <div class="choose-box-footer">
+                <p>Rs. 80 per km</p>
+                <a href="book-fleet.php" class="choose-box-footer-btn">Book Now</a>
+              </div>
+              <hr>
+            </div>
+          </div>
+          <div class="item">
+            <div class="choose-box">
+              <img src="./assets/CarImages/291-x-158-mahindra-bolero.webp" alt="" class="card-top-img">
+              <h3 class="card-title text-center">Mahindra Bolero</h3>
+              <h6 class="text-center text-dark">4 Passenger + 1 Driver</h6>
+              <hr>
+              <div class="choose-box-footer">
+                <p>Rs. 80 per km</p>
+                <a href="book-fleet.php" class="choose-box-footer-btn">Book Now</a>
+              </div>
+              <hr>
+            </div>
+          </div>
+          <div class="item">
+            <div class="choose-box ">
+              <img src="./assets/CarImages/291-x-158-mahindra-kuv100.webp" alt="" class="card-top-img">
+              <h3 class="card-title text-center">Mahindra KUV100</h3>
+              <h6 class="text-center text-dark">4 Passenger + 1 Driver</h6>
+              <hr>
+              <div class="choose-box-footer">
+                <p>Rs. 80 per km</p>
+                <a href="book-fleet.php" class="choose-box-footer-btn">Book Now</a>
+              </div>
+              <hr>
+            </div>
+          </div>
+          <div class="item">
+            <div class="choose-box">
+              <img src="./assets/CarImages/291-x-158-mahindra-scorpio.webp" alt="" class="card-top-img">
+              <h3 class="card-title text-center">Mahindra Scorpio</h3>
+              <h6 class="text-center text-dark">4 Passenger + 1 Driver</h6>
+              <hr>
+              <div class="choose-box-footer">
+                <p>Rs. 80 per km </p>
+                <a href="book-fleet.php" class="choose-box-footer-btn">Book Now</a>
+              </div>
+              <hr>
+            </div>
+          </div>
+          <div class="item">
+            <div class="choose-box">
+              <img src="./assets/CarImages/291-x-158-mahindra-xuv300.webp" alt="" class="card-top-img">
+              <h3 class="card-title text-center">Mahindra XUV300</h3>
+              <h6 class="text-center text-dark">4 Passenger + 1 Driver</h6>
+              <hr>
+              <div class="choose-box-footer">
+                <p>Rs. 80 per km</p>
+                <a href="book-fleet.php" class="choose-box-footer-btn">Book Now</a>
+              </div>
+              <hr>
+            </div>
+          </div>
+          <div class="item">
+            <div class="choose-box ">
+              <img src="./assets/CarImages/291-x-158-mahindra-xuv500.webp" alt="" class="card-top-img">
+              <h3 class="card-title text-center">Mahindra XUV300</h3>
+              <h6 class="text-center text-dark">4 Passenger + 1 Driver</h6>
+              <hr>
+              <div class="choose-box-footer">
+                <p>Rs. 80 per km</p>
+                <a href="book-fleet.php" class="choose-box-footer-btn">Book Now</a>
+              </div>
+              <hr>
+            </div>
+          </div>
+        </div>
+        <!-- Carousel For Bus -->
+        <div class="carousel owl-carousel owl-theme" data-item="buses">
+          <div class="item">
+            <div class="choose-box">
+              <img src="./assets/BusImages/bus1.png" style="width: 291px; height: 158px;" alt="" class="card-top-img">
+              <h3 class="card-title text-dark text-center">Alturas</h3>
+              <h6 class="text-center"><span class="text-dark">Capacity</span>: 22passenger + 1Driver</h6>
+              <hr>
+              <div class="choose-box-footer">
+                <p>Fair: <i class="fas fa-rupee-sign"></i><span class="rate"> 80km/hr</span></p>
+                <a href="book-fleet.php" class="choose-box-footer-btn">Book Now</a>
+              </div>
+              <hr>
+            </div>
+          </div>
+          <div class="item">
+            <div class="choose-box">
+              <img src="./assets/BusImages/bus2.png" style="width: 291px; height: 158px;" alt="" class="card-top-img">
+              <h3 class="card-title text-dark text-center">Bolero</h3>
+              <button class="custom-btn">Know more</button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="choose-box">
+              <img src="./assets/BusImages/bus1.png" style="width: 291px; height: 158px;" alt="" class="card-top-img">
+              <h3 class="card-title  text-dark text-center">KUV100</h3>
+              <button class="custom-btn">Know more</button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="choose-box">
+              <img src="./assets/BusImages/bus3.png" style="width: 291px; height: 158px;" alt="" class="card-top-img">
+              <h3 class="card-title  text-dark text-center">Scorpio</h3>
+              <button class="custom-btn">Know more</button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="choose-box">
+              <img src="./assets/BusImages/bus5.png" style="width: 291px; height: 158px;" alt="" class="card-top-img">
+              <h3 class="card-title  text-dark text-center">XUV500</h3>
+              <button class="custom-btn">Know more</button>
+            </div>
+          </div>
+        </div>
+        <!-- Carousel For Van -->
+        <div class="carousel owl-carousel owl-theme" data-item="vans" id="van-carousel">
+          <div class="item">
+            <div class="choose-box">
+              <img src="./assets/VanImages/minivan1.png" style="width: 291px; height: 158px;" alt="" class="card-top-img">
+              <h3 class="card-title text-dark text-center">Alturas</h3>
+              <button class="custom-btn">Know more</button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="choose-box">
+              <img src="./assets/VanImages/minivan2.png" style="width: 291px; height: 158px;" class="card-top-img">
+              <h3 class="card-title text-dark text-center">Bolero</h3>
+              <button class="custom-btn">Know more</button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="choose-box">
+              <img src="./assets/VanImages/minivan3.png" style="width: 291px; height: 158px;" alt="" class="card-top-img">
+              <h3 class="card-title  text-dark text-center">KUV100</h3>
+              <button class="custom-btn">Know more</button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="choose-box">
+              <img src="./assets/VanImages/minivan4.png" style="width: 291px; height: 158px;" alt="" class="card-top-img">
+              <h3 class="card-title  text-dark text-center">Scorpio</h3>
+              <button class="custom-btn">Know more</button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="choose-box">
+              <img src="./assets/VanImages/minivan5.png" style="width: 291px; height: 158px;" alt="" class="card-top-img">
+              <h3 class="card-title text-dark text-center">XUV300</h3>
+              <button class="custom-btn">Know more</button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="choose-box">
+              <img src="./assets/VanImages/minivan2.png" style="width: 291px; height: 158px;" alt="" class="card-top-img">
+              <h3 class="card-title  text-dark text-center">XUV500</h3>
+              <button class="custom-btn">Know more</button>
+            </div>
+          </div>
+        </div>
+        <!-- Carousel For Travellers -->
+        <div class="carousel owl-carousel owl-theme" data-item="travellers" id="traveller-carousel">
+          <div class="item">
+            <div class="choose-box">
+              <img src="./assets/TravellerImages/traveller1.jpg" style="width: 291px; height: 158px;" alt="" class="card-top-img">
+              <h3 class="card-title text-dark text-center">Alturas</h3>
+              <button class="custom-btn">Know more</button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="choose-box">
+              <img src="./assets/TravellerImages/traveller2.jpg" style="width: 291px; height: 158px;" class="card-top-img">
+              <h3 class="card-title text-dark text-center">Bolero</h3>
+              <button class="custom-btn">Know more</button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="choose-box">
+              <img src="./assets/TravellerImages/traveller3.png" style="width: 291px; height: 158px;" alt="" class="card-top-img">
+              <h3 class="card-title  text-dark text-center">KUV100</h3>
+              <button class="custom-btn">Know more</button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="choose-box">
+              <img src="./assets/TravellerImages/traveller4.png" style="width: 291px; height: 158px;" alt="" class="card-top-img">
+              <h3 class="card-title  text-dark text-center">Scorpio</h3>
+              <button class="custom-btn">Know more</button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="choose-box">
+              <img src="./assets/TravellerImages/traveller5.png" style="width: 291px; height: 158px;" alt="" class="card-top-img">
+              <h3 class="card-title text-dark text-center">XUV300</h3>
+              <button class="custom-btn">Know more</button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="choose-box">
+              <img src="./assets/TravellerImages/traveller2.jpg" style="width: 291px; height: 158px;" alt="" class="card-top-img">
+              <h3 class="card-title  text-dark text-center">XUV500</h3>
+              <button class="custom-btn">Know more</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!----------------------  Portfolio Filter ---------XX--------->
+
+
+
+
+  <!----------------------  Quick Action ----------------------->
+  <!-- <div id="quick-action">
+    <div class="container-fluid">
+      <h1 class="heading">Quick Actions</h1>
+      <div class="lfpadding">
+        <div class="row">
+          <div class="col-md-6 box">
+
+          </div>
+          <div class="col-md-6 box">
+
+          </div>
+          <div class="col-md-6 box">
+
+          </div>
+          <div class="col-md-6 box">
+
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div> -->
+  <!----------XX------------  Quick Action ------------XX----------->
+
+  <!---------------------  Contact Us Section ------------------->
+  <div id="contact-us">
+    <div class="">
+      <h1 class="heading text-center">Contact Us</h1>
+      <div class="row lfpadding" >
+        <div class="col-lg-8 col-md-6 map p-0">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111989.31313231292!2d77.32498803908494!3d28.69963511751684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf1bb41c50fdf%3A0xe6f06fd26a7798ba!2sGhaziabad%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1626429278677!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="col-lg-4 col-md-6 address">
+          <!-- <h2 class="text-center">Our Address</h2> -->
+          <h4>Apna Travels Pvt. Ltd.</h4>
+          <div class="contacts">
+            <div class="location">
+              <p>Street no. 8, Bheem Nagar, Ghaziabad <br> Uttar Pradesh, 201009, India.</p>
+            </div>
+            <div class="phone">
+              <i class="fas fa-phone-alt"></i><a href="">8888999900</a>
+            </div>
+            <div class="gmail">
+              <i class="far fa-envelope"></i>
+              <a href="">mail@dummywebsite.com</a>
+            </div>
+            <div class="share-location">
+              <div>
+                <i class="fas fa-map-marker-alt"></i>
+                <a href=""><span>View in Maps</span></a>
+                <a href="" class="share-map"><span><i class="fas fa-share-alt"></i>Share</span></a>
+              </div>
+            </div>
+          </div>
+          <button class="custom-btn"><a href="">Get a Quote</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!----------XX-----------  Contact Us Section ----------XX--------->
+
+
+  <!-----------------------  Footer Start  ---------------->
+  <!---------------------  Footer Section ------------------->
+  <div id="footer">
+    <div class="lfpadding">
+      <div class="row">
+        <div class="col-md-6 col-lg-3">
+          <div class="footer-logo">
+            <p style="font-size: 30px; margin-bottom: 0; color: #354C93; font-weight: 600;">Company Logo</p>
+            <div class="social">
+              <ul>
+                <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                <li><a href=""><i class="fab fa-youtube"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 footer-list">
+          <h4>Apna Travels</h4>
+          <ul>
+            <li><a href="">About Company</a></li>
+            <li><a href="">Careers</a></li>
+            <li><a href="">Contacts</a></li>
+            <li><a href="">QMS Certificate</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 footer-list">
+          <h4>Our Menus</h4>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Destination</a>
+            <li>
+            <li><a href="">Our Fleets</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3" id="footer-latest-post">
+          <h4>Latest Post</h4>
+          <ul class="footer-latest-post-ul">
+            <li>
+              <a href="">
+                <img src="./assets/CarImages/291-x-158-mahindra-xuv300.webp" alt="">
+                <div class="img-overlay">
+                  <h5>Mahindra XUV300 </h5>
+                  <p>January 20, 2020</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href=""><img src="./assets/CarImages/291-x-158-mahindra-alturasg4.webp" alt="">
+                <div class="img-overlay">
+                  <h5>Tour Vaishno Devi</h5>
+                  <p>January 20, 2020</p>
+                </div>
+              </a>
+        </div>
+        </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div id="footer-footer">
+    <div class="container-fluid">
+      <div class="row lfpadding">
+        <div class="left">
+          <p class="m-0">Copyright &copy; <a href="" style="color: white;">Ankit Kumar</a></p>
+        </div>
+        <div class="right">
+          <ul class="m-0">
+            <select name="" id="">
+              <option value="" selected>English</option>
+              <option value="">Chinese</option>
+              <option value="">Spanish</option>
+              <option value="">Arabic</option>
+              <option value="">Jussian</option>
+              <option value="">Japanese</option>
+              <option value="">French</option>
+              <option value="">American</option>
+              <option value="">Japanese</option>
+            </select>
+            <li>Apna Travels</li>
+            <li>Terms of Use</li>
+            <li>Privacy Policy</li>
+            <li>Sitemap</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-------------XX-----------  Footer Section ----------XX----------->
+
+  <!-- JQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+  <!-- Popper.JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- Owl Carousel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="./js/main.js"></script>
+
+  <!-- External jQuery File-->
+  <script src="./js/appjq.js"></script>
+
+  <!-- External Javascript File (include in index.php)-->
+  <script src="./js/main.js"></script>
+
+  <!-- External Javascript File-->
+  <script src="./js/get-a-quote.js"></script>
+</body>
+
+</html>
+<!-------------XX---------- Footer Ends -----------XX------>
